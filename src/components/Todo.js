@@ -6,6 +6,8 @@ const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp }) => {
     const [tempValue, setTempValue] = useState(title);
     const [completedState, setCompleted] = useState(completed);
 
+
+
     const handleDivDoubleClick = () => {
         setIsEditing(true);
     };
@@ -34,7 +36,7 @@ const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp }) => {
             return newState;
         });
     };
-
+   
     return (
         <div className="row">
             {
