@@ -4,10 +4,9 @@ import todos from "./apis";
 import Form from "./components/Form";
 import Section from "./components/Section";
 import List from "./components/List";
+import History from "./components/History";
 
 const appTitle = "To-Do App";
-
-
 
 const App = () => {
   const [todoList, setTodoList] = useState([todos]);
@@ -38,7 +37,7 @@ const App = () => {
       <Section>
         <h1>{appTitle}</h1>
       </Section>
-
+      <History taskList={todoList} title="Historial" />
       <Section>
         <Form addTodo={addTodo} />
       </Section>
