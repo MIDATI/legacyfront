@@ -8,9 +8,8 @@ import List from "./components/List";
 const appTitle = "To-Do App";
 
 
-
 const App = () => {
-  const [todoList, setTodoList] = useState(todos);
+  const [todoList, setTodoList] = useState([todos]);
 
   useEffect(() => {
     async function fetchData() {
