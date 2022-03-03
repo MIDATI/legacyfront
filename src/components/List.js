@@ -3,14 +3,16 @@ import Todo from "./Todo";
 
 const List = ({ list, removeTodoListProp, editTodoListProp }) => {
     const renderedList = list.map(
-        (item) => (
+        (item, index) => (
+            !item.deleted?
             <Todo
                 title={item.title}
                 completed={item.completed}
-                removeTodoItemProp={(e) => removeTodoListProp(item._id)}
+                deleted={item.deleted}
+                removeTodoItemProp={(updatedItem) => removeTodoListProp(item._id, updatedItem)}
                 editTodoItemProp={(updatedItem) => editTodoListProp(item._id, updatedItem)}
-                key={item._id}
-            />
+                key={index}
+            />: ''
         )
     );
     return (

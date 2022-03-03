@@ -25,16 +25,12 @@ const App = () => {
     const { data } = await todos.post("/todos", item);
     setTodoList((oldList) => [...oldList, data]);
   };
-
-  const removeTodo = async (id) => {
-    await todos.delete(`/todos/${id}`);
-    setTodoList((oldList) => oldList.filter((item) => item._id !== id));
-  };
-
   const editTodo = async (id, item) => {
     await todos.put(`/todos/${id}`, item);
   };
-
+  const removeTodo = async (id, item) => {
+    await todos.put(`/todos/${id}`, item);
+  };
   return (
     <div className="ui container center aligned">
       <Section>

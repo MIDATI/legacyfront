@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
-const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp }) => {
+const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp,deleted }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [value, setValue] = useState(title);
     const [tempValue, setTempValue] = useState(title);
     const [completedState, setCompleted] = useState(completed);
-
-
+    const [deletedState, setDeleted] = useState(deleted);
 
     const handleDivDoubleClick = () => {
         setIsEditing(true);
@@ -36,7 +35,12 @@ const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp }) => {
             return newState;
         });
     };
-   
+    const handleDeleted = () => {
+        setDeleted(!deletedState)
+        removeTodoItemProp({ deleted: true });
+        console.log(deletedState)
+    }
+
     return (
         <div className="row">
             {
@@ -66,8 +70,9 @@ const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp }) => {
                     </div>
 
                     <div className="column one wide">
+                        <div>{deletedState}</div>
                         <button
-                            onClick={removeTodoItemProp}
+                            onClick={handleDeleted}
                             className="ui button circular icon red"
                         >
                             <i className="white remove icon"></i>
