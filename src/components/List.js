@@ -9,7 +9,7 @@ const List = ({ list, removeTodoListProp, editTodoListProp }) => {
                 completed={item.completed}
                 removeTodoItemProp={(e) => removeTodoListProp(item._id)}
                 editTodoItemProp={(updatedItem) => editTodoListProp(item._id, updatedItem)}
-                key={item.title}
+                key={item._id}
             />
         )
     );
