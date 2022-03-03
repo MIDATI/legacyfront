@@ -7,14 +7,10 @@ import List from "./components/List";
 
 const appTitle = "To-Do App";
 
-const list = [
-  { id: 1, title: "test #1", completed: false },
-  { id: 2, title: "test #2" },
-  { id: 3, title: "test #3" },
-];
+
 
 const App = () => {
-  const [todoList, setTodoList] = useState(list);
+  const [todoList, setTodoList] = useState(todos);
 
   useEffect(() => {
     async function fetchData() {
