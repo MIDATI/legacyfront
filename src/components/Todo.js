@@ -40,7 +40,6 @@ const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp,deleted }
         removeTodoItemProp({ deleted: true });
         console.log(deletedState)
     }
-
     return (
         <div className="row">
             {
@@ -70,7 +69,6 @@ const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp,deleted }
                     </div>
 
                     <div className="column one wide">
-                        <div>{deletedState}</div>
                         <button
                             onClick={handleDeleted}
                             className="ui button circular icon red"
