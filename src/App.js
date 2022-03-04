@@ -6,7 +6,9 @@ import Section from "./components/Section";
 import List from "./components/List";
 import History from "./components/History";
 
-const appTitle = "To-Do App";
+import "./Styles/All.css";
+
+const appTitle = "Flores del Tambo";
 
 const App = () => {
   const [todoList, setTodoList] = useState([todos]);
@@ -16,7 +18,6 @@ const App = () => {
       const { data } = await todos.get("/todos");
       setTodoList(data);
     }
-
     fetchData();
   }, [newList]);
 
@@ -33,11 +34,14 @@ const App = () => {
     console.log(newList);
   };
   return (
-    <div className="ui container center aligned">
-      <Section>
-        <h1>{appTitle}</h1>
+    <div className="body">
+      <Section className="zoneHeader">
+      <div className="containerButtomHis">
+         <h1 className="titleStrong">{appTitle}</h1>
+         <History taskList={todoList} title="HISTORIAL" />
+      </div>
+
       </Section>
-      <History taskList={todoList} title="Historial" />
       <Section>
         <Form addTodo={addTodo} />
       </Section>
