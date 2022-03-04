@@ -1,4 +1,5 @@
 ![Flores-del-tambo.png](https://i.postimg.cc/zGtPpTfM/Flores-del-tambo.png)
+ <img[![Captura-de-Pantalla-2022-03-04-a-la-s-2-59-52-p-m.png](https://i.postimg.cc/fTgjGn3b/Captura-de-Pantalla-2022-03-04-a-la-s-2-59-52-p-m.png)](https://postimg.cc/fJm9dPf4)
 
 ### PREINSTALACIÓN ⚙️
 **Si cuentas con el programa Node.js , omite estos pasos🔍**
