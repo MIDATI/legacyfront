@@ -9,7 +9,8 @@
  ```
 brew install node 
 ```
-**Para Windows🖼:**Descargalo desde el navegador (LTS Version)
+**Para Windows🖼:**
+Descargalo desde el navegador (LTS Version)
  ```
 https://nodejs.org/en/
 ```
