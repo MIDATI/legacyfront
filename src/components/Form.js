@@ -12,7 +12,7 @@ const Form = ({ addTodo }) => {
 
         if(inputValue.trim() === "") return;
 
-        addTodo({ title: inputValue, completed: false });
+        addTodo({ title: inputValue, completed: false, deleted: false });
         setInputValue("");
     };
     
