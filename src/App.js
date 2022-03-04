@@ -10,7 +10,7 @@ const appTitle = "To-Do App";
 
 const App = () => {
   const [todoList, setTodoList] = useState([todos]);
-
+  let [ newList, setNewList ] = useState(false)
   useEffect(() => {
     async function fetchData() {
       const { data } = await todos.get("/todos");
@@ -18,28 +18,26 @@ const App = () => {
     }
 
     fetchData();
-  }, []);
+  }, [newList]);
 
   const addTodo = async (item) => {
     const { data } = await todos.post("/todos", item);
     setTodoList((oldList) => [...oldList, data]);
   };
-
-  const removeTodo = async (id) => {
-    await todos.delete(`/todos/${id}`);
-    setTodoList((oldList) => oldList.filter((item) => item._id !== id));
-  };
-
   const editTodo = async (id, item) => {
     await todos.put(`/todos/${id}`, item);
   };
-
+  const removeTodo = async (id, item) => {
+    await todos.put(`/todos/${id}`, item);
+    setNewList(!newList);
+    console.log(newList);
+  };
   return (
     <div className="ui container center aligned">
       <Section>
         <h1>{appTitle}</h1>
       </Section>
-      <History taskList={[]} title="Historial" />
+      <History taskList={todoList} title="Historial" />
       <Section>
         <Form addTodo={addTodo} />
       </Section>
