@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 
-const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp, deleted }) => {
+const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp}) => {
     const [isEditing, setIsEditing] = useState(false);
     const [value, setValue] = useState(title);
     const [tempValue, setTempValue] = useState(title);
     const [completedState, setCompleted] = useState(completed);
-    const [deletedState, setDeleted] = useState(deleted);
 
     const handleDivDoubleClick = () => {
         setIsEditing(true);
@@ -36,9 +35,7 @@ const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp, deleted 
         });
     };
     const handleDeleted = () => {
-        setDeleted(!deletedState)
         removeTodoItemProp({ deleted: true });
-        console.log(deletedState)
     }
     return (
         <div className="row">
