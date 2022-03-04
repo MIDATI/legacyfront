@@ -1,19 +1,18 @@
 import React from "react";
 import Todo from "./Todo";
 
-const List = ({ list, removeTodoListProp, editTodoListProp, todoList }) => {
+const List = ({ list, removeTodoListProp, editTodoListProp}) => {
     const renderedList = list.map(
         (item, index) => (
+            !item.deleted?
             <Todo
                 title={item.title}
-                id={item._id}
                 completed={item.completed}
                 deleted={item.deleted}
                 removeTodoItemProp={(updatedItem) => removeTodoListProp(item._id, updatedItem)}
                 editTodoItemProp={(updatedItem) => editTodoListProp(item._id, updatedItem)}
-                list={list}
                 key={index}
-            />
+            />:''
         )
     );
     return (

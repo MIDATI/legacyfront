@@ -39,7 +39,6 @@ const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp, deleted,
         setDeleted(!deletedState)
         removeTodoItemProp({ deleted: true });
         console.log(deletedState)
-        setTodoList((prevState)=> [...prevState, list])
     }
 
     return (
