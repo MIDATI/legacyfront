@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Tenali+Ramakrishna&display=swap');
+
+.body{
+    display: flex;
+    background-image: url("../img/Fondototal.jpeg");
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.titleStrong{
+    display: flex;
+    font-family: 'Sacramento', cursive;
+    font-weight: 1;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerButtomHis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#buttomHistory{
+    display: flex;
+    padding: 15px;
+    margin: 0;
+    background-color: #BA9EAE;
+    text-align: center;
+
+}
+
+.zoneHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
