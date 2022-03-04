@@ -49,7 +49,7 @@ function History(props) {
 
       <Modal.Actions>
         <Button color="black" onClick={() => setOpen(false)}>
-          Close
+          Cerrar
         </Button>
       </Modal.Actions>
     </Modal>

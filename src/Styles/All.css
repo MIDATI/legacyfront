@@ -41,3 +41,13 @@
     justify-content: center;
 }
 
+
+#styleInput{
+    width: 300px;
+}
+
+.modificateInput{
+    width: 100px;
+    background-color: blueviolet;
+
+}
