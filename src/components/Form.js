@@ -18,14 +18,15 @@ const Form = ({ addTodo }) => {
     
     return (
         <form className="ui form" onSubmit={handleFormSubmit}>
-            <div className="ui grid center aligned">
-                <div className="row">
-                    <div className="column five wide">
+            <div id="modificateInput" className="ui grid center aligned">
+                <div className="row"> 
+                    <div className="">
                         <input
+                            id="styleInput"
                             value={inputValue}
                             onChange={handleInputChange}
                             type="text"
-                            placeholder="Enter something to do..."
+                            placeholder="Ingresa tus tareas aqui..."
                         />
                     </div>
                     

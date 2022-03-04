@@ -34,7 +34,7 @@ function History(props) {
       onOpen={() => handleModal()}
       open={open}
       size={"tiny"}
-      trigger={<Button>{props.title}</Button>}
+      trigger={<Button id="buttomHistory">{props.title}</Button>}
     >
       <Modal.Header>
         <Header textAlign="center">{props.title}</Header>
@@ -49,7 +49,7 @@ function History(props) {
 
       <Modal.Actions>
         <Button color="black" onClick={() => setOpen(false)}>
-          Close
+          Cerrar
         </Button>
       </Modal.Actions>
     </Modal>
