@@ -1,4 +1,4 @@
-![Flores-del-tambo.png](https://i.postimg.cc/zGtPpTfM/Flores-del-tambo.png)](https://postimg.cc/CR8NxBkH)
+![Flores-del-tambo.png](https://i.postimg.cc/zGtPpTfM/Flores-del-tambo.png)
 
 ### PREINSTALACIÓN ⚙️
 **Si cuentas con el programa Node.js , omite estos pasos🔍**
